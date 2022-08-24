@@ -1,23 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import Main from "./components/Main";
+import Post from "./components/Post";
+import PostApply from "./components/PostApply";
+import PostInterview from "./components/PostInterview";
+import PostMap from "./components/PostMap";
+
+const Style = {
+  width: "100vw",
+  height: "100vh",
+};
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={Style}>
+      <Main />
+      <Post />
+      <PostMap />
+      <PostInterview />
+      <PostApply />
     </div>
   );
 }
