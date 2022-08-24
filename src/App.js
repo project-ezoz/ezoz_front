@@ -3,21 +3,22 @@ import Post from "./components/Post";
 import PostApply from "./components/PostApply";
 import PostInterview from "./components/PostInterview";
 import PostMap from "./components/PostMap";
+import styled from "styled-components";
 
-const Style = {
-  width: "100vw",
-  height: "100vh",
-};
+const Style = styled.div`
+  width: 100vw;
+  height: 100vh;
+`;
 
 function App() {
   return (
-    <div style={Style}>
+    <Style>
       <Main />
       <Post />
       <PostMap />
       <PostInterview />
       <PostApply />
-    </div>
+    </Style>
   );
 }
 

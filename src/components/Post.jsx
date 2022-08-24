@@ -23,7 +23,7 @@ const Box = styled.div`
 
 const Post = () => {
   return (
-    <div>
+    <div style={{ "margin-bottom": "5rem" }}>
       <Title>{str}</Title>
       <BoxContainer>
         <Box>box1</Box>

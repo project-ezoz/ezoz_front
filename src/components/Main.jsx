@@ -11,6 +11,7 @@ const Container = styled.div`
   width: 100vw;
   background-color: aliceblue;
   position: relative;
+  margin-bottom: 5rem;
 `;
 
 const Img = styled.img`
