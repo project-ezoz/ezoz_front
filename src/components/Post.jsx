@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-
+import post1 from "../assets/post1.png";
+import post2 from "../assets/post2.png";
 const Title = styled.h3`
   text-align: center;
 `;
@@ -13,12 +14,11 @@ const BoxContainer = styled.div`
   justify-content: center;
 `;
 
-const Box = styled.div`
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0) -15.5%, #000000 120.2%);
+const Box = styled.img`
+  opacity: 75%;
   width: 25rem;
   height: 40rem;
   text-align: center;
-  background-color: #00dc5f;
 `;
 
 const Post = () => {
@@ -26,8 +26,8 @@ const Post = () => {
     <div style={{ "margin-bottom": "5rem" }}>
       <Title>{str}</Title>
       <BoxContainer>
-        <Box>box1</Box>
-        <Box>box2</Box>
+        <Box src={post1} />
+        <Box src={post2} />
       </BoxContainer>
     </div>
   );
