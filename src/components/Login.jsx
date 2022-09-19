@@ -4,6 +4,13 @@ import React from "react";
 import GoogleLogin from "react-google-login";
 import * as config from "../config";
 
+const Container = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+`;
+
 function Login() {
   const onGoogleSignInSuccess = () => {
     console.log("succes");
@@ -12,14 +19,14 @@ function Login() {
     console.log("fail");
   };
   return (
-    <div>
+    <Container>
       <GoogleLogin
         clientId={config.CLIENT_ID}
         onSuccess={onGoogleSignInSuccess}
         onFailure={onGoogleSingInFailure}
         buttonText="구글로 계속하기"
       />
-    </div>
+    </Container>
   );
 }
 
