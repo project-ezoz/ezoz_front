@@ -6,6 +6,7 @@ import b1 from "../assets/back1.png";
 import b2 from "../assets/back2.png";
 import b3 from "../assets/back3.png";
 import { BsList } from "react-icons/bs";
+import { Link, NavLink } from "react-router-dom";
 
 const Container = styled.div`
   width: 100vw;
@@ -30,10 +31,22 @@ const Text = styled.h2`
 
 const Menu = styled.div`
   position: absolute;
+  display: flex;
   top: 3%;
   right: 3%;
   z-index: 1;
+  width: auto;
 `;
+
+const Login = styled(Link)`
+  font-size: large;
+  color: white;
+  margin-right: 20px;
+  &:hover {
+    font-weight: bold;
+  }
+`;
+
 const Title = styled.h3`
   color: black;
   position: absolute;
@@ -49,7 +62,8 @@ const Main = () => {
     <Container>
       <Title>EZOZ</Title>
       <Menu>
-        <BsList size="24" />
+        <Login to="/login">LOGIN</Login>
+        <BsList size="28" />
       </Menu>
       <Text>
         Lorem ipsum dolor sit <br /> amet, consectetur <br /> adipiscing elit.
