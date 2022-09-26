@@ -1,8 +1,7 @@
 import styled from "styled-components";
 
-import React from "react";
-import GoogleLogin from "react-google-login";
-import * as config from "../config";
+import React, { useState } from "react";
+import { GoogleOAuthProvider, GoogleLogin } from "@react-oauth/google";
 
 const Container = styled.div`
   display: flex;
@@ -12,20 +11,23 @@ const Container = styled.div`
 `;
 
 function Login() {
-  const onGoogleSignInSuccess = () => {
-    console.log("succes");
+  const [userObj, setUserObj] = useState("");
+  const onGoogleSignInSuccess = (res) => {
+    console.log(res);
   };
-  const onGoogleSingInFailure = () => {
+  const onGoogleSingInFailure = (res) => {
     console.log("fail");
+    console.log(res);
   };
   return (
     <Container>
-      <GoogleLogin
-        clientId={config.CLIENT_ID}
-        onSuccess={onGoogleSignInSuccess}
-        onFailure={onGoogleSingInFailure}
-        buttonText="구글로 계속하기"
-      />
+      <GoogleOAuthProvider clientId={process.env.REACT_APP_CLIENT_ID}>
+        <GoogleLogin
+          buttonText="구글로 계속하기"
+          onSuccess={onGoogleSignInSuccess}
+          onError={onGoogleSingInFailure}
+        />
+      </GoogleOAuthProvider>
     </Container>
   );
 }

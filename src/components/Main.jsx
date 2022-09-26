@@ -6,7 +6,7 @@ import b1 from "../assets/back1.png";
 import b2 from "../assets/back2.png";
 import b3 from "../assets/back3.png";
 import { BsList } from "react-icons/bs";
-import { Link, NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Container = styled.div`
   width: 100vw;
