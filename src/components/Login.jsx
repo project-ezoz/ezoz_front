@@ -23,8 +23,9 @@ const Img = styled.img`
   padding-right: 16px;
 `;
 function Login() {
-  const handleTryLogin = () => {
+  const handleTryLogin = async () => {
     console.log("click");
+    window.location.href = process.env.REACT_APP_API_URL;
   };
   return (
     <GoogleContainer onClick={handleTryLogin}>
