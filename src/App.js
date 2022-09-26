@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { Routes, Route, BrowserRouter } from "react-router-dom";
-import Login from "./components/Login";
+import Auth from "./pages/Auth";
 import Home from "./pages/Home";
 
 const Style = styled.div`
@@ -14,7 +14,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />}></Route>
-          <Route path="/login" element={<Login />}></Route>
+          <Route path="/login" element={<Auth />}></Route>
         </Routes>
       </BrowserRouter>
     </Style>

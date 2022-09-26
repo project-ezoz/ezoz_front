@@ -1,34 +1,36 @@
+import React from "react";
 import styled from "styled-components";
+import img from "../assets/g-logo.png";
 
-import React, { useState } from "react";
-import { GoogleOAuthProvider, GoogleLogin } from "@react-oauth/google";
-
-const Container = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
+const GoogleContainer = styled.div`
+  width: auto;
+  height: 40px;
+  box-shadow: 2px 2px 2px 2px lightgray;
+  border-radius: 2px;
+  color: lightgray;
+  font-weight: bold;
+  padding-right: 16px;
+  &:hover {
+    background-color: #4285f4;
+    color: white;
+    box-shadow: none;
+    border: 1px #4285f4 solid;
+  }
 `;
 
+const Img = styled.img`
+  height: 100%;
+  padding-right: 16px;
+`;
 function Login() {
-  const [userObj, setUserObj] = useState("");
-  const onGoogleSignInSuccess = (res) => {
-    console.log(res);
-  };
-  const onGoogleSingInFailure = (res) => {
-    console.log("fail");
-    console.log(res);
+  const handleTryLogin = () => {
+    console.log("click");
   };
   return (
-    <Container>
-      <GoogleOAuthProvider clientId={process.env.REACT_APP_CLIENT_ID}>
-        <GoogleLogin
-          buttonText="구글로 계속하기"
-          onSuccess={onGoogleSignInSuccess}
-          onError={onGoogleSingInFailure}
-        />
-      </GoogleOAuthProvider>
-    </Container>
+    <GoogleContainer onClick={handleTryLogin}>
+      <Img src={img} />
+      Sign in with Google
+    </GoogleContainer>
   );
 }
 
