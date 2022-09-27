@@ -18,7 +18,7 @@ function App() {
           <Route path="/login" element={<Auth />}></Route>
           <Route
             path="/auth/google/callback"
-            component={CallbackGoogle}
+            element={<CallbackGoogle />}
           ></Route>
         </Routes>
       </BrowserRouter>
