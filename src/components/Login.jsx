@@ -25,7 +25,7 @@ const Img = styled.img`
 function Login() {
   const handleTryLogin = async () => {
     console.log("click");
-    window.location.href = process.env.REACT_APP_API_URL;
+    window.location.href = process.env.REACT_APP_API_URL2;
   };
   return (
     <GoogleContainer onClick={handleTryLogin}>
