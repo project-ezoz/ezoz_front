@@ -7,6 +7,7 @@ const Container = styled.div`
   text-align: center;
   padding-top: 200px;
   padding-bottom: 200px;
+  height: 40rem;
 `;
 
 const Button = styled.div`

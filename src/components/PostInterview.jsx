@@ -8,6 +8,9 @@ const Title = styled.div`
 
 const str = `저는 오지를 탐험하는 디자이너 전성은 입니다`;
 
+const Page = styled.div`
+  height: 40rem;
+`;
 const BoxContainer = styled.div`
   display: grid;
   grid-template-columns: 30% 30%;
@@ -23,13 +26,13 @@ const Box = styled.img`
 `;
 const PostInterview = () => {
   return (
-    <div style={{ "margin-bottom": "5rem" }}>
+    <Page>
       <Title>OZ 러너 인터뷰</Title>
       <BoxContainer>
         <Box src={peo1} />
         <Box src={peo2} />
       </BoxContainer>
-    </div>
+    </Page>
   );
 };
 

@@ -17,7 +17,7 @@ const BoxContainer = styled.div`
 const Box = styled.img`
   opacity: 75%;
   width: 25rem;
-  height: 40rem;
+  height: 35rem;
   text-align: center;
 `;
 
