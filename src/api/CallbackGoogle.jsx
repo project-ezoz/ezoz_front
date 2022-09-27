@@ -8,11 +8,9 @@ const CallbackGoogle = () => {
 
   useEffect(() => {
     async function fetchCode() {
-      axios
-        .post(`https://ezoz-trip.com/api/oauth/login?code=${code}`)
-        .then((res) => {
-          console.log(res);
-        });
+      axios.post(`/api/oauth/login?code=${code}`).then((res) => {
+        console.log(res);
+      });
     }
     fetchCode();
   });
