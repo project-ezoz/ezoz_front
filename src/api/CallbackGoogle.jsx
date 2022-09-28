@@ -9,12 +9,11 @@ const TOKEN =
 const CallbackGoogle = () => {
   const code = new URL(window.location.href).searchParams.get("code");
   console.log(code);
-
   // 1. 인가 코드 구글로 넘겨서 토큰 받기
 
   axios
     .post(
-      "https://ezoz-trip.com/api/oauth/login",
+      "/login",
       {
         body: { memberType: "GOOGLE" },
       },

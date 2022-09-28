@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import mapImg from "../assets/map.png";
+// import mapImg from "../assets/map.png";
 
 const MapContainer = styled.div`
   background-color: black;
@@ -61,9 +61,7 @@ const PostMap = () => {
           <MapButton>MAP</MapButton>
         </Center>
       </Left>
-      <Right>
-        <Map src={mapImg} />
-      </Right>
+      <Right>{/*<Map src={mapImg} />*/}</Right>
     </MapContainer>
   );
 };
