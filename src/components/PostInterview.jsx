@@ -6,18 +6,19 @@ const Title = styled.div`
   font-size: 20px;
 `;
 
-const str = `저는 오지를 탐험하는 디자이너 전성은 입니다`;
-
 const Page = styled.div`
   height: 40rem;
 `;
 const BoxContainer = styled.div`
   display: grid;
-  grid-template-columns: 30% 30%;
-  gap: 10%;
+  align-items: center;
   justify-content: center;
 `;
-
+const GridBox = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+`;
 const Box = styled.img`
   opacity: 75%;
   width: 20rem;
@@ -29,8 +30,10 @@ const PostInterview = () => {
     <Page>
       <Title>OZ 러너 인터뷰</Title>
       <BoxContainer>
-        <Box src={peo1} />
-        <Box src={peo2} />
+        <GridBox>
+          <Box src={peo1} />
+          <Box src={peo2} />
+        </GridBox>
       </BoxContainer>
     </Page>
   );
