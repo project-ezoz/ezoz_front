@@ -22,6 +22,7 @@ const Img = styled.img`
   height: 100%;
   padding-right: 16px;
 `;
+
 function Login() {
   const handleTryLogin = async () => {
     console.log("click");
