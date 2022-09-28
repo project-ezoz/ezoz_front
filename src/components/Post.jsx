@@ -59,6 +59,7 @@ const PostText = styled.p`
   left: 50%;
   transform: translate(-50%, 0);
 `;
+
 const PostBox = styled.div`
   position: relative;
 `;
