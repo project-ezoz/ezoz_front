@@ -3,8 +3,6 @@ import { Routes, Route, BrowserRouter } from "react-router-dom";
 import Auth from "./pages/Auth";
 import Home from "./pages/Home";
 import CallbackGoogle from "./api/CallbackGoogle";
-import { useState } from "react";
-import { useEffect } from "react";
 
 const Style = styled.div`
   width: 100vw;

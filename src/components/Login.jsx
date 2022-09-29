@@ -28,7 +28,7 @@ function Login() {
   const handleTryLogin = async () => {
     console.log("click");
     await axios
-      .get("/")
+      .get("/api")
       .then((res) => console.log(res))
       .catch((err) => console.log(err));
     //window.location.href = process.env.REACT_APP_API_URL2;
