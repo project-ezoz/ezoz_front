@@ -27,12 +27,13 @@ const Img = styled.img`
 function Login() {
   const handleTryLogin = async () => {
     console.log("click");
-    await axios
-      .get("/api")
-      .then((res) => console.log(res))
-      .catch((err) => console.log(err));
-    //window.location.href = process.env.REACT_APP_API_URL2;
+    // await axios
+    //   .get("/health")
+    //   .then((res) => console.log(res))
+    //   .catch((err) => console.log(err));
+    window.location.href = process.env.REACT_APP_API_URL2;
   };
+
   return (
     <GoogleContainer onClick={handleTryLogin}>
       <Img src={img} />
