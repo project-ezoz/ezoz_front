@@ -15,9 +15,7 @@ const CallbackGoogle = () => {
   useEffect(() => {
     async function getToken() {
       axios
-        .get(
-          `https://ezoz-trip.com/auth/google/callback?code=${code}&scope=email+profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+openid+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile&authuser=0&prompt=none`
-        )
+        .get(`https://ezoz-trip.com/auth/google?code=${code}`)
         .then((res) => {
           console.log(res);
           setIsGet(res);
