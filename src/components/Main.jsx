@@ -7,7 +7,6 @@ import b2 from "../assets/back2.png";
 import b3 from "../assets/back3.png";
 import { BsList } from "react-icons/bs";
 import { Link } from "react-router-dom";
-import axios from "axios";
 
 const Container = styled.div`
   width: 100vw;
@@ -59,19 +58,10 @@ const Title = styled.h3`
 `;
 
 const Main = (props) => {
-  // 백엔드와 요청 제대로 되었는지 확인하는 버튼
-  const handleConfirm = async () => {
-    await axios
-      .get("/health")
-      .then((res) => console.log(res))
-      .catch((err) => console.log(err));
-  };
-
   return (
     <Container>
       <Title>EZOZ</Title>
       <Menu>
-        <button onClick={handleConfirm}>요청 확인 버튼</button>
         {/* {props ? <Login to="/login">LOGIN</Login> : <Logout />} */}
         <Login to="/login">LOGIN</Login>
         <BsList size="28" />

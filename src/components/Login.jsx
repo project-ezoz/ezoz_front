@@ -1,4 +1,3 @@
-import axios from "axios";
 import React from "react";
 import styled from "styled-components";
 import img from "../assets/g-logo.png";
@@ -25,12 +24,8 @@ const Img = styled.img`
 `;
 
 function Login() {
-  const handleTryLogin = async () => {
+  const handleTryLogin = () => {
     console.log("click");
-    // await axios
-    //   .get("/health")
-    //   .then((res) => console.log(res))
-    //   .catch((err) => console.log(err));
     window.location.href = process.env.REACT_APP_API_URL2;
   };
 

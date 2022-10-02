@@ -11,19 +11,12 @@ const CallbackGoogle = () => {
   console.log(code);
 
   const [isGet, setIsGet] = useState("");
-  // 1. 인가 코드 구글로 넘겨서 토큰 받기
 
   useEffect(() => {
     async function getToken() {
       axios
-        .post(
-          "/api/oauth/google",
-          {
-            body: { memberType: "GOOGLE" },
-          },
-          {
-            headers: { Authorization: `Bearer ${TOKEN}` },
-          }
+        .get(
+          `https://ezoz-trip.com/auth/google/callback?code=${code}&scope=email+profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+openid+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile&authuser=0&prompt=none`
         )
         .then((res) => {
           console.log(res);
@@ -32,8 +25,6 @@ const CallbackGoogle = () => {
     }
     getToken();
   });
-
-  // 2. 토큰 받아서 백엔드로 넘겨주기
 
   return <div>{isGet ? <p>get login</p> : <p>not login</p>}</div>;
 };
