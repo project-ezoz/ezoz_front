@@ -4,8 +4,6 @@ import { useState } from "react";
 import { useEffect } from "react";
 
 axios.defaults.withCredentials = true;
-const TOKEN =
-  "ya29.a0Aa4xrXPfrYCp0uvCPSycbawtmqgPtzcGwMf0NH51nmV6GtuuyvQ_njZ2MBbNvdmG9Vzml7fn1NzAJfqou7uDLE8Aoi7QZ0WHb1ukxGl0qRHtYuq9YEhGwuPUztB-Vp49Nj1ZvNgi4myliCeIJu42fGI9tiFVHQaCgYKATASARISFQEjDvL92aB2UH1gDhWoDLKraUzFgQ0165";
 const CallbackGoogle = () => {
   const code = new URL(window.location.href).searchParams.get("code");
   console.log(code);
