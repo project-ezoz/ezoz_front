@@ -25,7 +25,6 @@ const Img = styled.img`
 
 function Login() {
   const handleTryLogin = () => {
-    console.log("click");
     window.location.href = process.env.REACT_APP_API_URL2;
   };
 

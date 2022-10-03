@@ -8,9 +8,10 @@ const CallbackGoogle = () => {
   const code = new URL(window.location.href).searchParams.get("code");
   console.log(code);
 
+  const [isCode, setIsCode] = useState("");
   const [isGet, setIsGet] = useState("");
 
-  useEffect(() => {
+  /*useEffect(() => {
     async function getToken() {
       axios
         .get(`https://ezoz-trip.com/auth/google?code=${code}`)
@@ -20,7 +21,7 @@ const CallbackGoogle = () => {
         });
     }
     getToken();
-  });
+  });*/
 
   return <div>{isGet ? <p>get login</p> : <p>not login</p>}</div>;
 };
