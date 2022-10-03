@@ -11,17 +11,15 @@ const CallbackGoogle = () => {
   const [isCode, setIsCode] = useState("");
   const [isGet, setIsGet] = useState("");
 
-  /*useEffect(() => {
-    async function getToken() {
-      axios
-        .get(`https://ezoz-trip.com/auth/google?code=${code}`)
-        .then((res) => {
-          console.log(res);
-          setIsGet(res);
-        });
-    }
+  if (code) {
     getToken();
-  });*/
+  }
+
+  function getToken() {
+    axios.get(`https://ezoz-trip.com/auth/google?code=${code}`).then((res) => {
+      console.log(res);
+    });
+  }
 
   return <div>{isGet ? <p>get login</p> : <p>not login</p>}</div>;
 };
