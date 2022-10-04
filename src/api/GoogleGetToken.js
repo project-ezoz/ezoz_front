@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const GoogleGetToken = (code) => {
+export const GoogleGetToken = (code) => {
   return function () {
     axios
       .get(`https://ezoz-trip.com/auth/google?code=${code}`)
