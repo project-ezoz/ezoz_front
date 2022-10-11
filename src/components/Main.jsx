@@ -57,7 +57,7 @@ const Title = styled.h3`
   height: 20;
 `;
 
-const Main = (props) => {
+const Main = () => {
   return (
     <Container>
       <Title>EZOZ</Title>
