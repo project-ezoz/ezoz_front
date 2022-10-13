@@ -57,13 +57,17 @@ const Title = styled.h3`
   height: 20;
 `;
 
-const Main = () => {
+const Main = (props) => {
   return (
     <Container>
       <Title>EZOZ</Title>
       <Menu>
-        {/* {props ? <Login to="/login">LOGIN</Login> : <Logout />} */}
-        <Login to="/login">LOGIN</Login>
+        {!props.isLogin ? (
+          <Login to="/login">LOGIN</Login>
+        ) : (
+          <Login to="/logout">LOGOUT</Login>
+        )}
+
         <BsList size="28" />
       </Menu>
       <Text>
