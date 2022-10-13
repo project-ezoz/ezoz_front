@@ -1,10 +1,10 @@
-const { createProxyMiddleware } = require("http-proxy-middleware");
+const proxy = require("http-proxy-middleware");
 
+// src/setupProxy.js
 module.exports = function (app) {
   app.use(
-    "/",
-    createProxyMiddleware({
-      target: "https://ezoz-trip.com",
+    proxy("/", {
+      target: "https://ezoz-trip.com", // 비즈니스 서버 URL 설정
       changeOrigin: true,
     })
   );

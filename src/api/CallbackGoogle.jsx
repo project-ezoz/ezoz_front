@@ -1,27 +1,28 @@
-import axios from "axios";
 import React from "react";
-import { useState } from "react";
 import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
-axios.defaults.withCredentials = true;
 const CallbackGoogle = () => {
   const code = new URL(window.location.href).searchParams.get("code");
-  console.log(code);
+  const navigate = useNavigate();
 
-  const [isCode, setIsCode] = useState("");
-  const [isGet, setIsGet] = useState("");
-
-  if (code) {
-    getToken();
-  }
-
-  function getToken() {
-    axios.get(`https://ezoz-trip.com/auth/google?code=${code}`).then((res) => {
-      console.log(res);
-    });
-  }
-
-  return <div>{isGet ? <p>get login</p> : <p>not login</p>}</div>;
+  useEffect(() => {
+    fetch(`https://ezoz-trip.com/auth/google?code=${code}`, {
+      method: "GET",
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        // const A_TOKEN = data.accessToken;
+        // localStorage.setItem("token", A_TOKEN);
+        // navigate("/", { state: true });
+      })
+      .catch((error) => {
+        console.log(error);
+        window.alert("login fail");
+      });
+  }, []);
+  return <div>loging...</div>;
 };
 
 export default CallbackGoogle;
