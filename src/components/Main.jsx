@@ -10,7 +10,7 @@ import { Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 
 const Container = styled.div`
-  width: 100vw;
+  width: 1000px;
   background-color: aliceblue;
   position: relative;
   margin-bottom: 5rem;
