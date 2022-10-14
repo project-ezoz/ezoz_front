@@ -13,9 +13,10 @@ const CallbackGoogle = () => {
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
-        // const A_TOKEN = data.accessToken;
-        // localStorage.setItem("token", A_TOKEN);
-        // navigate("/", { state: true });
+        console.log(data.accessToken);
+        const A_TOKEN = data.accessToken;
+        localStorage.setItem("token", A_TOKEN);
+        navigate("/", { state: { logState: "success" } });
       })
       .catch((error) => {
         console.log(error);

@@ -7,6 +7,7 @@ import b2 from "../assets/back2.png";
 import b3 from "../assets/back3.png";
 import { BsList } from "react-icons/bs";
 import { Link } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 const Container = styled.div`
   width: 100vw;
@@ -57,12 +58,15 @@ const Title = styled.h3`
   height: 20;
 `;
 
-const Main = (props) => {
+const Main = () => {
+  const location = useLocation();
+  console.log("main: ", location.state);
+
   return (
     <Container>
       <Title>EZOZ</Title>
       <Menu>
-        {!props.isLogin ? (
+        {location.state === null ? (
           <Login to="/login">LOGIN</Login>
         ) : (
           <Login to="/logout">LOGOUT</Login>
