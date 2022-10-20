@@ -1,6 +1,7 @@
 import React from "react";
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import Spinner from "../components/Spinner";
 
 const CallbackGoogle = () => {
   const code = new URL(window.location.href).searchParams.get("code");
@@ -23,7 +24,11 @@ const CallbackGoogle = () => {
         window.alert("login fail");
       });
   }, []);
-  return <div>loging...</div>;
+  return (
+    <div>
+      <Spinner />
+    </div>
+  );
 };
 
 export default CallbackGoogle;

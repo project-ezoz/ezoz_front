@@ -8,6 +8,8 @@ import b3 from "../assets/back3.png";
 import { BsList } from "react-icons/bs";
 import { Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
+import { useState } from "react";
+import Nav from "./Nav/Nav";
 
 const Container = styled.div`
   width: 1000px;
@@ -60,8 +62,11 @@ const Title = styled.h3`
 
 const Main = () => {
   const location = useLocation();
-  console.log("main: ", location.state);
+  const [isMenu, setMenu] = useState(false);
 
+  const handleNavBar = () => {
+    setMenu((isMenu) => !isMenu);
+  };
   return (
     <Container>
       <Title>EZOZ</Title>
@@ -72,7 +77,7 @@ const Main = () => {
           <Login to="/logout">LOGOUT</Login>
         )}
 
-        <BsList size="28" />
+        {isMenu ? <Nav /> : <BsList size="28" onClick={handleNavBar} />}
       </Menu>
       <Text>
         Lorem ipsum dolor sit <br /> amet, consectetur <br /> adipiscing elit.
