@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import peo1 from "../assets/peo1.png";
-import peo2 from "../assets/peo2.png";
+import peo1 from "../../assets/peo1.png";
+import peo2 from "../../assets/peo2.png";
 const Title = styled.div`
   font-size: 20px;
 `;

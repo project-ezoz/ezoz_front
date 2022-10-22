@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import MapCom from "../components/MapCom";
-import MapSideCom from "../components/MapSideCom";
+import MapCom from "../components/Map/MapCom";
+import MapSideCom from "../components/Map/MapSideCom";
 
 const Container = styled.div`
   width: 100%;

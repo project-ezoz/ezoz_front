@@ -1,7 +1,7 @@
 import React from "react";
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import Spinner from "../components/Spinner";
+import Spinner from "../components/Auth/Spinner";
 
 const CallbackGoogle = () => {
   const code = new URL(window.location.href).searchParams.get("code");

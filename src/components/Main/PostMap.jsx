@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import mapImg from "../assets/map.png";
+import mapImg from "../../assets/map.png";
 import { Link } from "react-router-dom";
 
 const MapContainer = styled.div`

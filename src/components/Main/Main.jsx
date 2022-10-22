@@ -2,14 +2,14 @@ import "antd/dist/antd.css";
 import { Carousel } from "antd";
 import styled from "styled-components";
 import React from "react";
-import b1 from "../assets/back1.png";
-import b2 from "../assets/back2.png";
-import b3 from "../assets/back3.png";
+import b1 from "../../assets/back1.png";
+import b2 from "../../assets/back2.png";
+import b3 from "../../assets/back3.png";
 import { BsList } from "react-icons/bs";
 import { Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 import { useState } from "react";
-import Nav from "./Nav/Nav";
+import Nav from "../Nav/Nav";
 
 const Container = styled.div`
   width: 1000px;

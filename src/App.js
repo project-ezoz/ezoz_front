@@ -3,7 +3,7 @@ import { Routes, Route, BrowserRouter } from "react-router-dom";
 import Auth from "./pages/Auth";
 import Home from "./pages/Home";
 import CallbackGoogle from "./api/CallbackGoogle";
-import Logout from "./components/Logout";
+import Logout from "./components/Auth/Logout";
 import Map from "./pages/Map";
 
 const Style = styled.div`

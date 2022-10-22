@@ -1,8 +1,8 @@
-import Main from "../components/Main";
-import Post from "../components/Post";
-import PostApply from "../components/PostApply";
-import PostInterview from "../components/PostInterview";
-import PostMap from "../components/PostMap";
+import Main from "../components/Main/Main";
+import Post from "../components/Main/Post";
+import PostApply from "../components/Main/PostApply";
+import PostInterview from "../components/Main/PostInterview";
+import PostMap from "../components/Main/PostMap";
 
 function Home() {
   return (
