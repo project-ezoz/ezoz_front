@@ -1,6 +1,7 @@
 import React from "react";
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import Spinner from "../components/Auth/Spinner";
 
 const CallbackGoogle = () => {
   const code = new URL(window.location.href).searchParams.get("code");
@@ -13,16 +14,21 @@ const CallbackGoogle = () => {
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
-        // const A_TOKEN = data.accessToken;
-        // localStorage.setItem("token", A_TOKEN);
-        // navigate("/", { state: true });
+        console.log(data.accessToken);
+        const A_TOKEN = data.accessToken;
+        localStorage.setItem("token", A_TOKEN);
+        navigate("/", { state: { logState: "success" } });
       })
       .catch((error) => {
         console.log(error);
         window.alert("login fail");
       });
   }, []);
-  return <div>loging...</div>;
+  return (
+    <div>
+      <Spinner />
+    </div>
+  );
 };
 
 export default CallbackGoogle;

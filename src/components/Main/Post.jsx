@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import post1 from "../assets/post1.png";
-import post2 from "../assets/post2.png";
+import post1 from "../../assets/post1.png";
+import post2 from "../../assets/post2.png";
 
 const Title = styled.p`
   text-align: center;

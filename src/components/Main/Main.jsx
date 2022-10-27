@@ -2,15 +2,18 @@ import "antd/dist/antd.css";
 import { Carousel } from "antd";
 import styled from "styled-components";
 import React from "react";
-import b1 from "../assets/back1.png";
-import b2 from "../assets/back2.png";
-import b3 from "../assets/back3.png";
+import b1 from "../../assets/back1.png";
+import b2 from "../../assets/back2.png";
+import b3 from "../../assets/back3.png";
 import { BsList } from "react-icons/bs";
 import { Link } from "react-router-dom";
+import { useLocation } from "react-router-dom";
+import { useState } from "react";
+import Nav from "../Nav/Nav";
 
 const Container = styled.div`
-  width: 100vw;
-  background-color: aliceblue;
+  width: 1200px;
+  height: 800px;
   position: relative;
   margin-bottom: 5rem;
 `;
@@ -57,18 +60,24 @@ const Title = styled.h3`
   height: 20;
 `;
 
-const Main = (props) => {
+const Main = () => {
+  const location = useLocation();
+  const [isMenu, setMenu] = useState(false);
+
+  const handleNavBar = () => {
+    setMenu((isMenu) => !isMenu);
+  };
   return (
     <Container>
       <Title>EZOZ</Title>
       <Menu>
-        {!props.isLogin ? (
+        {location.state === null ? (
           <Login to="/login">LOGIN</Login>
         ) : (
           <Login to="/logout">LOGOUT</Login>
         )}
 
-        <BsList size="28" />
+        {isMenu ? <Nav /> : <BsList size="28" onClick={handleNavBar} />}
       </Menu>
       <Text>
         Lorem ipsum dolor sit <br /> amet, consectetur <br /> adipiscing elit.
