@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import MapCom from "../components/Map/MapCom";
-import MapSideCom from "../components/Map/MapSideCom";
+
+import AllMap from "../container/Map/AllMap";
 
 const Container = styled.div`
   width: 100%;
@@ -11,8 +11,7 @@ const Container = styled.div`
 function Map() {
   return (
     <Container>
-      <MapSideCom />
-      <MapCom />
+      <AllMap />
     </Container>
   );
 }

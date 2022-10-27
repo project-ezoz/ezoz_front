@@ -4,6 +4,7 @@ import styled from "styled-components";
 
 const NavContainer = styled.div`
   width: 200px;
+  height: 800px;
   background-color: white;
 `;
 const Nav = () => {

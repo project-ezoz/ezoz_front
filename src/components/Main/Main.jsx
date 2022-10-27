@@ -12,8 +12,8 @@ import { useState } from "react";
 import Nav from "../Nav/Nav";
 
 const Container = styled.div`
-  width: 1000px;
-  background-color: aliceblue;
+  width: 1200px;
+  height: 800px;
   position: relative;
   margin-bottom: 5rem;
 `;
