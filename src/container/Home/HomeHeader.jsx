@@ -9,7 +9,7 @@ import { BsList } from "react-icons/bs";
 import { Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 import { useState } from "react";
-import Nav from "../Nav/Nav";
+import Nav from "../../components/Nav/Nav";
 
 const Container = styled.div`
   width: 1200px;
@@ -60,7 +60,7 @@ const Title = styled.h3`
   height: 20;
 `;
 
-const Main = () => {
+const HomeHeader = () => {
   const location = useLocation();
   const [isMenu, setMenu] = useState(false);
 
@@ -97,4 +97,4 @@ const Main = () => {
   );
 };
 
-export default Main;
+export default HomeHeader;

@@ -25,7 +25,7 @@ const Box = styled.img`
   height: 25rem;
   text-align: center;
 `;
-const PostInterview = () => {
+const HomeInterview = () => {
   return (
     <Page>
       <Title>OZ 러너 인터뷰</Title>
@@ -39,4 +39,4 @@ const PostInterview = () => {
   );
 };
 
-export default PostInterview;
+export default HomeInterview;

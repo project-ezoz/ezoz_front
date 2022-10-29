@@ -54,7 +54,7 @@ const Center = styled.div`
   left: 20%;
 `;
 
-const PostMap = () => {
+const HomeMap = () => {
   return (
     <MapContainer>
       <Left>
@@ -72,4 +72,4 @@ const PostMap = () => {
   );
 };
 
-export default PostMap;
+export default HomeMap;

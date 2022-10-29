@@ -64,7 +64,7 @@ const PostBox = styled.div`
   position: relative;
 `;
 
-const Post = () => {
+const HomePost = () => {
   return (
     <Page>
       <Title>{str}</Title>
@@ -86,4 +86,4 @@ const Post = () => {
   );
 };
 
-export default Post;
+export default HomePost;

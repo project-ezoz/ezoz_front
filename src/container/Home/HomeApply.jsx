@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import "./postApply.css";
+import "./HomeApply.css";
 import { useState } from "react";
 import axios from "axios";
 const Container = styled.div`
@@ -22,7 +22,7 @@ const Button = styled.div`
   font-size: 40px;
 `;
 
-const PostApply = () => {
+const HomeApply = () => {
   const [inputs, setInputs] = useState({
     username: "",
     email: "",
@@ -78,4 +78,4 @@ const PostApply = () => {
   );
 };
 
-export default PostApply;
+export default HomeApply;
