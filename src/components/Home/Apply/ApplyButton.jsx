@@ -8,12 +8,12 @@ const Button = styled.div`
   justify-content: center;
   align-items: center;
   margin: 0 auto;
-  width: 800px;
+  width: 700px;
   font-size: 1.4rem;
 `;
 
-const ApplyButton = (props) => {
-  return <Button>{props}</Button>;
+const ApplyButton = ({ name, ...rest }) => {
+  return <Button {...rest}>{name}</Button>;
 };
 
 export default ApplyButton;

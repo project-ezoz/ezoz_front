@@ -1,8 +1,10 @@
 import React from "react";
 import styled from "styled-components";
-import "./HomeApply.css";
 import { useState } from "react";
 import axios from "axios";
+import InputValue from "../../components/Home/Apply/InputValue";
+import ApplyButton from "../../components/Home/Apply/ApplyButton";
+
 const Container = styled.div`
   background-color: #eeeeee;
   text-align: center;
@@ -11,33 +13,22 @@ const Container = styled.div`
   height: 40rem;
 `;
 
-const Button = styled.div`
-  background-color: #424242;
-  color: white;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
-  width: 400px;
-  font-size: 40px;
-`;
-
 const HomeApply = () => {
   const [inputs, setInputs] = useState({
     username: "",
     email: "",
   });
-  const { username, email } = inputs; // 비구조화 할당을 통해 값 추출
+  const { username, email } = inputs;
   const onChange = (e) => {
-    const { value, name } = e.target; // 우선 e.target 에서 name 과 value 를 추출
+    const { value, name } = e.target;
     setInputs({
-      ...inputs, // 기존의 input 객체를 복사한 뒤
-      [name]: value, // name 키를 가진 값을 value 로 설정
+      ...inputs,
+      [name]: value,
     });
   };
   const handleApply = (e) => {
     e.preventDefault();
-    // console.log(inputs);
+
     axios
       .post("https://ezoz-trip.com/api/subscription", {
         username: inputs.username,
@@ -57,7 +48,7 @@ const HomeApply = () => {
   };
   return (
     <Container>
-      <input
+      <InputValue
         id="email_input"
         className="apply_input"
         placeholder="이메일"
@@ -65,7 +56,7 @@ const HomeApply = () => {
         onChange={onChange}
         value={email}
       />
-      <input
+      <InputValue
         id="name_input"
         className="apply_input"
         placeholder="이름"
@@ -73,7 +64,7 @@ const HomeApply = () => {
         onChange={onChange}
         value={username}
       />
-      <Button onClick={handleApply}>구독 신청하기</Button>
+      <ApplyButton name="구독 신청하기" onClick={handleApply} />
     </Container>
   );
 };
