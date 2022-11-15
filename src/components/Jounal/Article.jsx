@@ -1,7 +1,17 @@
 import React from "react";
+import styled from "styled-components";
 
+const ArticleBox = styled.div`
+  background-color: green;
+  width: 300px;
+`;
 function Article() {
-  return <div>저널 기사 컴포넌트</div>;
+  return (
+    <ArticleBox>
+      <img src="test" alt="joursnal 기사" />
+      <p className="journal-title">Text area</p>
+    </ArticleBox>
+  );
 }
 
 export default Article;

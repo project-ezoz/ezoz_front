@@ -1,7 +1,11 @@
 import React from "react";
 
 function InputSearch() {
-  return <div>저널 검색 입력창</div>;
+  return (
+    <div>
+      <input placeholder="검색어를 입력해주세요" />
+    </div>
+  );
 }
 
 export default InputSearch;

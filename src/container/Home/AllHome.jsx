@@ -9,8 +9,8 @@ function AllHome() {
     <div>
       <HomeHeader />
       <HomePost />
-      <HomeInterview />
       <HomeMap />
+      <HomeInterview />
       <HomeApply />
     </div>
   );
