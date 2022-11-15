@@ -9,7 +9,7 @@ import CallbackGoogle from "./api/CallbackGoogle";
 import Logout from "./components/Auth/Logout";
 
 const Style = styled.div`
-  width: 1200px;
+  width: 100vw;
   height: 100vh;
   margin: 0 auto;
 `;

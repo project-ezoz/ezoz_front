@@ -5,7 +5,7 @@ import Marker from "./Marker";
 import SpotRequest from "./SpotRequest";
 
 const Container = styled.div`
-  width: 800px;
+  width: 100%;
   height: 800px;
 `;
 function MapCom() {
