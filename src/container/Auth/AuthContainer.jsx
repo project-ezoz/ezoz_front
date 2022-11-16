@@ -1,4 +1,4 @@
-import { Container, Grid } from "@mui/material";
+import { Grid } from "@mui/material";
 import React from "react";
 import styled from "styled-components";
 import ImgContent from "../../components/Auth/ImgContent";
@@ -11,11 +11,20 @@ const AuthContainer = () => {
       <Grid item xs={6}>
         <ImgContent />
       </Grid>
-      <Grid item xs={6}>
-        <Container>
+      <Grid
+        item
+        xs={6}
+        style={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+      >
+        <div>
           <Login />
+          <br />
           <LoginContent />
-        </Container>
+        </div>
       </Grid>
     </Grid>
   );
