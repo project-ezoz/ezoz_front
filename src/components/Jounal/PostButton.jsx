@@ -1,7 +1,17 @@
 import React from "react";
+import styled from "styled-components";
 
+const WriteJournalBtn = styled.div`
+  background-color: #00dc5f;
+  color: black;
+  width: 100px;
+`;
 function PostButton() {
-  return <div>저널 등록 버튼 - 작가 전용</div>;
+  return (
+    <div>
+      <WriteJournalBtn>게시물 작성하기</WriteJournalBtn>
+    </div>
+  );
 }
 
 export default PostButton;

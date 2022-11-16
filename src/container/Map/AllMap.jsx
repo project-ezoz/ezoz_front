@@ -1,13 +1,17 @@
 import React from "react";
 import MapCom from "../../components/Map/MapCom";
 import MapSideCom from "../../components/Map/MapSideCom";
+import Grid from "@mui/material/Grid";
 function AllMap() {
   return (
-    <div>
-      지도 컨테이너 / 지도 컴포넌트 모아놓는곳
-      <MapSideCom />
-      <MapCom />
-    </div>
+    <Grid container spacing={0}>
+      <Grid xs={6} md={2}>
+        <MapSideCom />
+      </Grid>
+      <Grid xs={6} md={10}>
+        <MapCom />
+      </Grid>
+    </Grid>
   );
 }
 

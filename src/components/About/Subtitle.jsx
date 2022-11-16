@@ -1,7 +1,7 @@
 import React from "react";
 
 function Subtitle() {
-  return <div>저널 부제목</div>;
+  return <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>;
 }
 
 export default Subtitle;
