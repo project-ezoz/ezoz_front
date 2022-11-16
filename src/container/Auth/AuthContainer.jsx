@@ -1,0 +1,24 @@
+import { Container, Grid } from "@mui/material";
+import React from "react";
+import styled from "styled-components";
+import ImgContent from "../../components/Auth/ImgContent";
+import Login from "../../components/Auth/Login";
+import LoginContent from "../../components/Auth/LoginContent";
+
+const AuthContainer = () => {
+  return (
+    <Grid container spacing={0}>
+      <Grid item xs={6}>
+        <ImgContent />
+      </Grid>
+      <Grid item xs={6}>
+        <Container>
+          <Login />
+          <LoginContent />
+        </Container>
+      </Grid>
+    </Grid>
+  );
+};
+
+export default AuthContainer;

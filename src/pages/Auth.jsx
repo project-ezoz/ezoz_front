@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import React from "react";
 import Login from "../components/Auth/Login";
+import AuthContainer from "../container/Auth/AuthContainer";
 
 const Container = styled.div`
   display: flex;
@@ -12,7 +13,7 @@ const Container = styled.div`
 function Auth() {
   return (
     <Container>
-      <Login />
+      <AuthContainer />
     </Container>
   );
 }

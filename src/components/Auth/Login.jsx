@@ -3,24 +3,24 @@ import styled from "styled-components";
 import img from "../../assets/g-logo.png";
 
 const GoogleContainer = styled.div`
-  width: auto;
-  height: 40px;
+  width: 300px;
+  text-align: center;
+  height: auto;
+  border: 1px solid black;
   box-shadow: 2px 2px 2px 2px lightgray;
-  border-radius: 2px;
-  color: lightgray;
+  border-radius: 10px;
+  color: black;
   font-weight: bold;
-  padding-right: 16px;
   &:hover {
-    background-color: #4285f4;
-    color: white;
     box-shadow: none;
-    border: 1px #4285f4 solid;
+    cursor: pointer;
   }
 `;
 
 const Img = styled.img`
+  margin: 5px;
+  width: 30px;
   height: 100%;
-  padding-right: 16px;
 `;
 
 function Login() {
@@ -31,7 +31,7 @@ function Login() {
   return (
     <GoogleContainer onClick={handleTryLogin}>
       <Img src={img} />
-      Sign in with Google
+      구글로 3초만에 로그인 하기
     </GoogleContainer>
   );
 }
