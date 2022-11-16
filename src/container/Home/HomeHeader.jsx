@@ -10,6 +10,7 @@ import { Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 import { useState } from "react";
 import Nav from "../../components/Nav/Nav";
+import HeaderTitle from "../../components/Home/Header/HeaderTitle";
 
 const Container = styled.div`
   height: 800px;
@@ -49,16 +50,6 @@ const Login = styled(Link)`
   }
 `;
 
-const Title = styled.h3`
-  color: black;
-  position: absolute;
-  top: 3%;
-  left: 3%;
-  z-index: 1;
-  width: 55;
-  height: 20;
-`;
-
 const HomeHeader = () => {
   const location = useLocation();
   const [isMenu, setMenu] = useState(false);
@@ -68,7 +59,7 @@ const HomeHeader = () => {
   };
   return (
     <Container>
-      <Title>EZOZ</Title>
+      <HeaderTitle />
       <Menu>
         {location.state === null ? (
           <Login to="/login">LOGIN</Login>
