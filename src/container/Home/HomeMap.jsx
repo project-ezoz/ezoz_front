@@ -1,12 +1,14 @@
 import React from "react";
 import styled from "styled-components";
 import mapImg from "../../assets/map.png";
-import { Link } from "react-router-dom";
+import MapButton from "../../components/Home/Map/MapButton";
+import MapTitle from "../../components/Home/Map/MapTitle";
 
 const MapContainer = styled.div`
   background-color: black;
   height: 45rem;
   width: 100%;
+  height: 960px;
 `;
 
 const Left = styled.div`
@@ -25,24 +27,6 @@ const Right = styled.div`
   display: flex;
 `;
 
-const MapButton = styled(Link)`
-  background-color: #00dc5f;
-  color: black;
-  width: 100px;
-  text-align: center;
-  font-size: 24px;
-  font-weight: bold;
-  &:hover {
-    color: white;
-  }
-`;
-
-const Title = styled.p`
-  color: white;
-  font-size: 24px;
-  font-weight: bold;
-`;
-
 const Map = styled.img`
   width: 100%;
   height: 100%;
@@ -59,10 +43,9 @@ const HomeMap = () => {
     <MapContainer>
       <Left>
         <Center>
-          <Title>
-            새로운 오지를 경험하고 싶으신가요?<br></br>EZOZ에서 탐색해보세요
-          </Title>
-          <MapButton to="/map">MAP</MapButton>
+          <MapTitle str="새로운 오지를 경험하고 싶으신가요?" />
+          <MapTitle str="EZOZ에서 탐색해보세요" />
+          <MapButton />
         </Center>
       </Left>
       <Right>
