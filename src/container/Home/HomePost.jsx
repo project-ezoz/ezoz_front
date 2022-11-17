@@ -16,7 +16,7 @@ const HomePost = () => {
   return (
     <Page>
       <PostHeader />
-      <Grid container spacing={3}>
+      <Grid container spacing={1}>
         <Grid item xs={6}>
           <PostContainer idx="post1" />
         </Grid>
