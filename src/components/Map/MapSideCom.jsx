@@ -1,5 +1,7 @@
 import React from "react";
 import styled from "styled-components";
+import HeaderTitle from "../Home/Header/HeaderTitle";
+import SearchSpot from "./MapSide/SearchSpot";
 
 const SideBar = styled.div`
   background-color: black;
@@ -8,7 +10,12 @@ const SideBar = styled.div`
 `;
 
 function MapSideCom() {
-  return <SideBar>EZOZ</SideBar>;
+  return (
+    <SideBar>
+      <HeaderTitle color="black" />
+      <SearchSpot />
+    </SideBar>
+  );
 }
 
 export default MapSideCom;

@@ -15,7 +15,7 @@ const Menu = styled.div`
 const HomeHeader = () => {
   return (
     <div>
-      <HeaderTitle />
+      <HeaderTitle color="white" />
       <Menu>
         {window.localStorage.getItem("token") === null ? (
           <LoginButton log="login" />

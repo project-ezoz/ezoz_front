@@ -14,7 +14,15 @@ const Button = styled.div`
   }
 `;
 const MapButton = () => {
-  return <Button>MAP -&gt; </Button>;
+  return (
+    <Button
+      onClick={() => {
+        window.location.href = "/map";
+      }}
+    >
+      MAP -&gt;{" "}
+    </Button>
+  );
 };
 
 export default MapButton;

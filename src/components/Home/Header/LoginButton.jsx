@@ -8,6 +8,7 @@ const Login = styled(Link)`
   margin-right: 20px;
   &:hover {
     font-weight: bold;
+    color: black;
   }
 `;
 

@@ -1,9 +1,5 @@
 import React from "react";
-import marker from "../../assets/marker.png";
-const Marker = () => (
-  <div>
-    <img src={marker} alt="marker" width="60px" />
-  </div>
-);
+import { FaMapMarkerAlt } from "react-icons/fa";
+const Marker = (props) => <FaMapMarkerAlt size="30" color={props.color} />;
 
 export default Marker;

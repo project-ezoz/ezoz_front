@@ -16,8 +16,15 @@ const Title = styled.h3`
 const handleHomeMove = () => {
   window.location.href = "/";
 };
-const HeaderTitle = () => {
-  return <Title onClick={handleHomeMove}>EZOZ</Title>;
+const HeaderTitle = (props) => {
+  return (
+    <Title
+      onClick={handleHomeMove}
+      style={{ color: `${props.color === "black" ? "white" : "black"}` }}
+    >
+      EZOZ
+    </Title>
+  );
 };
 
 export default HeaderTitle;
