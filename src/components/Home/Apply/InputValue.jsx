@@ -4,8 +4,8 @@ import styled from "styled-components";
 const Input = styled.input`
   width: 300px;
   border: 1px solid black;
-  text-align: center;
-  font-size: 1.2rem;
+  font-size: 20px;
+  padding: 10px;
   ::placeholder {
     color: rgba(0, 0, 0, 0.4);
   }

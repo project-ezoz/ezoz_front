@@ -7,9 +7,6 @@ import PostContainer from "./Post/PostContainer";
 const Page = styled.div`
   width: 100%;
   height: 960px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 `;
 
 const HomePost = () => {
