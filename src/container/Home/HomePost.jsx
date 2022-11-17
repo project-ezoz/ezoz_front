@@ -1,15 +1,15 @@
 import React from "react";
 import styled from "styled-components";
-
 import PostHeader from "../../components/Home/Post/PostHeader";
-
 import { Grid } from "@mui/material";
 import PostContainer from "./Post/PostContainer";
 
 const Page = styled.div`
   width: 100%;
-  height: 100%;
-  margin-bottom: 10rem;
+  height: 960px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 
 const HomePost = () => {

@@ -1,40 +1,33 @@
+import { Grid } from "@mui/material";
 import React from "react";
 import styled from "styled-components";
-import peo1 from "../../assets/peo1.png";
-import peo2 from "../../assets/peo2.png";
-const Title = styled.div`
-  font-size: 20px;
-`;
+import InterviewContent from "../../components/Home/Interview/InterviewContent";
+
+import InterviewHeader from "../../components/Home/Interview/InterviewHeader";
 
 const Page = styled.div`
-  height: 40rem;
-`;
-const BoxContainer = styled.div`
-  display: grid;
+  width: 100%;
+  height: 960px;
+  display: flex;
   align-items: center;
   justify-content: center;
 `;
-const GridBox = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 5rem;
-`;
-const Box = styled.img`
-  opacity: 75%;
-  width: 20rem;
-  height: 25rem;
-  text-align: center;
-`;
+const Box = styled.div``;
+
 const HomeInterview = () => {
   return (
     <Page>
-      <Title>OZ 러너 인터뷰</Title>
-      <BoxContainer>
-        <GridBox>
-          <Box src={peo1} />
-          <Box src={peo2} />
-        </GridBox>
-      </BoxContainer>
+      <Box>
+        <InterviewHeader />
+        <Grid container spacing={3}>
+          <Grid item xs={6}>
+            <InterviewContent idx="peo1" />
+          </Grid>
+          <Grid item xs={6}>
+            <InterviewContent idx="peo2" />
+          </Grid>
+        </Grid>
+      </Box>
     </Page>
   );
 };

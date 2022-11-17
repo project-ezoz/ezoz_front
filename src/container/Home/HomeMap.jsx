@@ -8,6 +8,7 @@ const MapContainer = styled.div`
   background-color: black;
   height: 45rem;
   width: 100%;
+  height: 960px;
 `;
 
 const Left = styled.div`

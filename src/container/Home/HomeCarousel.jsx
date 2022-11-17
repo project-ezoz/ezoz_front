@@ -5,13 +5,12 @@ import React from "react";
 import b1 from "../../assets/back1.png";
 import b2 from "../../assets/back2.png";
 import b3 from "../../assets/back3.png";
-import { useLocation } from "react-router-dom";
+
 import HomeHeader from "./HomeHeader";
 
 const Container = styled.div`
-  height: 800px;
+  height: 960px;
   position: relative;
-  margin-bottom: 5rem;
 `;
 
 const Img = styled.img`
