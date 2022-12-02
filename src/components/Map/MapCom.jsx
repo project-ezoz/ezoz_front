@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useEffect } from "react";
 import GoogleMapReact from "google-map-react";
 import styled from "styled-components";
 import SpotRequest from "./SpotRequest";
 import Marker from "./Marker";
+import axios from "axios";
 
 const Container = styled.div`
   width: 100%;
@@ -20,6 +21,13 @@ function MapCom() {
   const handleClick = (e) => {
     console.log(e.lat, e.lng);
   };
+
+  useEffect(() => {
+    axios
+      .get("https://ezoz-trip.com/posts?keyword=test")
+      .then((res) => console.log(res));
+  }, []);
+
   return (
     <Container>
       <GoogleMapReact
