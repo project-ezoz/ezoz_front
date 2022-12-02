@@ -5,6 +5,7 @@ import Main from "./pages/Main";
 
 import CallbackGoogle from "./api/CallbackGoogle";
 import Logout from "./components/Auth/Logout";
+import Map from "./pages/Map";
 
 const Style = styled.div`
   width: 100vw;
@@ -25,6 +26,7 @@ function App() {
             path="/auth/google/callback"
             element={<CallbackGoogle />}
           ></Route>
+          <Route path="/map" element={<Map />} />
         </Routes>
       </BrowserRouter>
     </Style>
