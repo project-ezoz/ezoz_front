@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import React from "react";
-import Login from "../components/Auth/Login";
 import AuthContainer from "../container/Auth/AuthContainer";
 
 const Container = styled.div`

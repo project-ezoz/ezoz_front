@@ -1,10 +1,8 @@
 import styled from "styled-components";
 import { Routes, Route, BrowserRouter } from "react-router-dom";
 import Auth from "./pages/Auth";
-import Home from "./pages/Home";
-import About from "./pages/About";
-import Map from "./pages/Map";
-import Journal from "./pages/Journal";
+import Main from "./pages/Main";
+
 import CallbackGoogle from "./api/CallbackGoogle";
 import Logout from "./components/Auth/Logout";
 
@@ -19,7 +17,7 @@ function App() {
     <Style>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Home />}></Route>
+          <Route path="/" element={<Main />}></Route>
 
           <Route path="/login" element={<Auth />}></Route>
           <Route path="/logout" element={<Logout />}></Route>
@@ -27,10 +25,6 @@ function App() {
             path="/auth/google/callback"
             element={<CallbackGoogle />}
           ></Route>
-
-          <Route path="/map" element={<Map />}></Route>
-          <Route path="/about" element={<About />}></Route>
-          <Route path="/journal" element={<Journal />}></Route>
         </Routes>
       </BrowserRouter>
     </Style>

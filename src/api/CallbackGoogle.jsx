@@ -1,32 +1,32 @@
+import axios from "axios";
 import React from "react";
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import Spinner from "../components/Auth/Spinner";
+import Loading from "../components/Auth/Loading";
 
 const CallbackGoogle = () => {
   const code = new URL(window.location.href).searchParams.get("code");
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch(`https://ezoz-trip.com/auth/google?code=${code}`, {
-      method: "GET",
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        console.log(data);
-        console.log(data.accessToken);
-        const A_TOKEN = data.accessToken;
+    axios
+      .get(`https://ezoz-trip.com/auth/google?code=${code}`)
+      .then((res) => {
+        console.log(res.data);
+        console.log(res.data.accessToken);
+        const A_TOKEN = res.data.accessToken;
         localStorage.setItem("token", A_TOKEN);
-        navigate("/", { state: { logState: "success" } });
+        //navigate("/", { state: { logState: "success" } });
+        navigate("/");
       })
       .catch((error) => {
         console.log(error);
-        window.alert("login fail");
+        window.alert(error);
       });
   }, []);
   return (
     <div>
-      <Spinner />
+      <Loading />
     </div>
   );
 };
