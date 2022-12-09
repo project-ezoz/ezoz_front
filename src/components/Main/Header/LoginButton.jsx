@@ -4,7 +4,7 @@ import styled from "styled-components";
 
 const Login = styled(Link)`
   font-size: 28px;
-  color: white;
+  color: black;
   margin-right: 20px;
   &:hover {
     font-weight: bold;
@@ -15,7 +15,7 @@ const Login = styled(Link)`
 const LoginButton = (props) => {
   return (
     <>
-      {props.log === "login" ? (
+      {props.auth === "login" ? (
         <Login to="/login">JOIN</Login>
       ) : (
         <Login to="/logout">LOGOUT</Login>
